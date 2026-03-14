@@ -1,3 +1,4 @@
+const API_URL = "https://ai-journal-api.onrender.com";
 async function submitJournal(){
 
 let text = document.getElementById("entry").value;
@@ -11,7 +12,7 @@ document.getElementById("result").innerText = "Analyzing...";
 
 try{
 
-let response = await fetch("http://127.0.0.1:8000/journal",{
+let response = await fetch(`${API_URL}/journal`,{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
@@ -40,7 +41,7 @@ document.getElementById("result").innerText =
 
 async function loadHistory(){
 
-let response = await fetch("http://127.0.0.1:8000/journals");
+let response = await fetch(`${API_URL}/journals`);
 
 let data = await response.json();
 
@@ -64,7 +65,7 @@ list.appendChild(li);
 
 async function loadChart(){
 
-let response = await fetch("http://127.0.0.1:8000/journals");
+let response = await fetch(`${API_URL}/journals`);
 
 let data = await response.json();
 
