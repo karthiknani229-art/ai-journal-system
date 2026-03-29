@@ -1,4 +1,4 @@
-const API_URL = "https://ai-journal-api.onrender.com";
+const API_URL = "https://ai-journal-system-2sc8.onrender.com";
 async function submitJournal(){
 
 let text = document.getElementById("entry").value;
