@@ -113,11 +113,12 @@ Neutral
 
 Frontend:
 
-https://your-netlify-app.netlify.app
+https://ai-journal-system.netlify.app/
 
 Backend API:
 
-https://your-render-api.onrender.com/docs
+https://ai-journal-system-2sc8.onrender.com/
+
  Note
 
 If the backend is deployed on the Render free tier, the server may take 1-2 minutes to wake up after inactivity.
