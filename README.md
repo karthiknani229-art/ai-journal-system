@@ -1,133 +1,94 @@
-AI-Assisted Journaling System
+# AI-Assisted Journaling System
 
-A full-stack prototype that allows users to write journal entries, detect emotions from their text, and view mood insights over time.
+A full-stack journaling platform that analyzes journal entries for emotion detection and mood insights using AI-driven text processing.
 
-This project was built as part of a Full Stack Developer Internship assignment for RevoltronX – Team ArvyaX, focused on building innovative wellness and AI-driven experiences.
+## Live Demo
 
- Features
+- Frontend: https://ai-journal-system.netlify.app/
+- Backend API: https://ai-journal-system-2sc8.onrender.com/
+- Swagger Docs: https://ai-journal-system-2sc8.onrender.com/docs
 
-Create journal entries
+> Note: Backend is on Render's free tier — first request may take 30–60 seconds due to cold start.
 
-Emotion detection based on journal text
+## Tech Stack
 
-Store entries in a database
+**Frontend:** HTML, CSS, JavaScript, Chart.js
 
-View journal history
+**Backend:** Python, FastAPI
 
-Visualize mood trends with charts
+**Database:** SQLite
 
-How It Works
+**Deployment:** Netlify (Frontend), Render (Backend)
 
-User writes a journal entry in the web interface.
+## Features
 
-The frontend sends the text to the backend API.
+- Write and store journal entries
+- Automatic emotion detection from entry text
+- View full journal history
+- Interactive mood trend visualization with Chart.js
+- Tracks 5 emotion categories: Happy, Sad, Stress, Angry, Neutral
 
-The backend analyzes the emotion from the text.
+## How It Works
 
-The entry and emotion are stored in the database.
+```
+User writes journal entry
+        ↓
+Frontend sends text to backend API
+        ↓
+Backend analyzes emotion from text
+        ↓
+Entry and detected emotion stored in SQLite
+        ↓
+Frontend displays emotion and updates mood charts
+```
 
-The frontend displays the emotion and updates mood insights.
+## Project Structure
 
- Tech Stack
-Frontend
-
-HTML
-
-CSS
-
-JavaScript
-
-Chart.js
-
-Backend
-
-Python
-
-FastAPI
-
-Database
-
-SQLite
-
-Deployment
-
-Frontend: Netlify
-
-Backend: Render
-
-Source Code: GitHub
-
- Project Structure
-ai-journal-system
+```
+ai-journal-system/
 │
-├── backend
+├── backend/
 │   ├── main.py
 │   └── requirements.txt
 │
-├── frontend
+├── frontend/
 │   ├── index.html
 │   ├── script.js
 │   └── style.css
 │
 └── README.md
- Running Locally
-1. Clone the Repository
-git clone https://github.com/your-username/ai-journal-system.git
+```
+
+## Local Setup
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/karthiknani229-art/ai-journal-system.git
 cd ai-journal-system
-2. Start Backend
+```
+
+**2. Start backend**
+
+```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
-Backend runs at:
+Backend runs at: http://127.0.0.1:8000
 
-http://127.0.0.1:8000
+Swagger docs at: http://127.0.0.1:8000/docs
 
-API documentation:
+**3. Start frontend**
 
-http://127.0.0.1:8000/docs
-3. Start Frontend
+```bash
 cd frontend
 python -m http.server 5500
+```
 
-Open in browser:
+Open in browser: http://127.0.0.1:5500
 
-http://127.0.0.1:5500
- Mood Insights
+## Author
 
-The application generates emotion analytics by analyzing past journal entries and displaying them using Chart.js.
-
-Example emotions tracked:
-
-Happy
-
-Sad
-
-Stress
-
-Angry
-
-Neutral
-
- Live Demo
-
-Frontend:
-
-https://ai-journal-system.netlify.app/
-
-Backend API:
-
-https://ai-journal-system-2sc8.onrender.com/
-
- Note
-
-If the backend is deployed on the Render free tier, the server may take 1-2 minutes to wake up after inactivity.
-
-
- Author
-
-Karthik Penta
-Full Stack Developer
-
-GitHub:
-https://github.com/karthiknani229-art
+Penta Karthik — [GitHub](https://github.com/karthiknani229-art)
